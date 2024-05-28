@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gourav Vyas</title>
+    <link rel="stylesheet" href="port.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&family=Roboto:wght@100;300;400;500;700;900&display=swap"
+        rel="stylesheet">
+</head>
+
+<body>
+    <button class="sidebar-toggle" onclick="toggleSidebar()">☰</button>
+    <navbar class="nav-bar">
+        <div class="nav">
+            <button class="home" id="box" onclick="Section1()">Home</button>
+            <button class="about" id="box" onclick="Section5()">About</button>
+            <button class="skills" id="box" onclick="Section2()">Skills</button>
+            <button class="education" id="box"  onclick="openPDF()">Resume</button>
+            <button class="projects" id="box" onclick="Section3()">Projects</button>
+            <button class="contact" id="box" onclick="Section4()">Contact</button>
+        </div>
+    </navbar>
+    </div>
+    <div class="sec"></div>
+    <main>
+        <section class="landing-page show-animation">
+            <h1 class="content-start">Hello👋, I'm Gourav Vyas</h1>
+            <p class="content-mid"><span>Front End Developer</span> <br> based in <span>India</span></p>
+            <p class="content-end">I love creating websites, doing freelance work and focusing on designing digital
+                products that are easy on users and customers ❤️</p>
+            <div class="btn">
+                <button class="btn1" onclick="Section3()">Check My Projects 🚀</button>
+                <button class="btn2" onclick="openEmail()">Email Me ✉️</button>
+            </div>
+            <!--<div class="scroll-content">
+                <ul>
+                    <li>Code Enthusiast</li>
+                    <li>Web Developer</li>
+                    <li>Software Engineer</li>
+                    <li>Frontend Developer</li>
+                    <li>Javascript Developer</li>
+                    <li>Technology Enthusiast</li>
+                </ul>
+            </div>-->
+        </section>
+    </main>
+    <section class="skill">
+        <h1>Skills</h1>
+        <p class="reveal-type">Working with HTML, CSS and Javascript. Also worked with C++,C and Python. <br>Currently learning and practicing React Js 🚀</p>
+    </section>
+    <section class="section2">
+        <p class="section2-content">Featured Projects</p>
+        <div class="page-content ">
+            <div class="box">
+                <div class="icon">
+                    <img src="Screenshot 2024-05-27 235533.png" class="todo" alt="Project 1">
+                </div>
+                <div class="heading1">
+                     <p>To Do List</p>
+                     <button class="box-btn" onclick="todo()">Live Demo</button>
+                </div>
+            </div>
+            <div class="box">
+                <div class="icon">
+                    <img src="Screenshot 2024-05-27 234204.png" class="grid" alt="Project 2">
+                </div>
+                <div class="heading2">
+                    <p>Grid</p>
+                    <button class="box-btn" onclick="grid()">Live Demo</button>
+                </div>
+            </div>
+            <div class="box">
+               <div class="icon">
+                <img src="Screenshot 2024-05-27 233517.png" class="pass" alt="Project 3">
+               </div>
+               <div class="heading2">
+                <p>Password Generator</p>
+                <button class="box-btn" onclick="pass()">Live Demo</button>
+               </div>
+            </div>
+            <h2 class="more">FIND MORE OF THEM ON MY "GitHub"</h2>
+        </div>
+    </section>
+    <section class="section3">
+        <h1>Contact Us</h1>
+        <h3>Get In Touch</h3>
+        <div class="contact-btns">
+            <img src="linkdin.jpeg" alt="linkdin" class="link" onclick="openLinkdin()">
+            <img src="git.png" alt="Github" class="git" onclick="openGitHubProfile()">
+            <img src="ins.png" alt="instagram" class="instagram">
+        </div>
+        <div class="email">
+            <h4>gouravvyas542@gmail.com</h4>
+        </div>
+
+    </section>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"
+        integrity="sha512-7eHRwcbYkK4d9g/6tD/mhkf++eoTHwpNM9woBxtPUBWm67zeAfFC+HrdoE2GanKeocly/VxeLvIqwvCdk7qScg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"
+        integrity="sha512-onMTRKJBKz8M1TnqqDuGBlowlH0ohFzMXYRNebz+yOcc5TQr/zAKsthzhuv0hiyUKEiQEQXEynnXCvNTOk50dg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="port.js"></script>
+</body>
+</html>
