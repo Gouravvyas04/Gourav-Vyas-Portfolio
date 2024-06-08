@@ -191,6 +191,11 @@ document.addEventListener("DOMContentLoaded", () => {
        window.open(url, "_blank");
      }
 
+    function openIgProfile() {
+     var url = "https://www.instagram.com/gourav_vyas616/";
+     window.open(url, "_blank");
+   }
+
 function todo(){
   var url = "https://gouravvyas04.github.io/To-Do-List/";
   window.open(url, "_blank");
