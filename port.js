@@ -136,7 +136,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
 // button functioning
   function openPDF() {
-    const url = "https://docs.google.com/document/d/11JgLYQEBPV5YVlomLhAQ5cxKPCI8I_hM4Nh1HErgvLY/edit?tab=t.0";
+    const url = "https://drive.google.com/drive/my-drive?q=owner:me%20parent:0AJRIkkzm1JeIUk9PVA";
     window.open(url, "_blank");
   }
 
