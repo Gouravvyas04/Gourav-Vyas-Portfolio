@@ -115,8 +115,12 @@ main span {
 
 .btn {
     display: flex;
-    justify-content: space-evenly;
+    justify-content: center; /* Center buttons horizontally */
+    align-items: center; /* Center buttons vertically */
+    flex-direction: row; /* Align buttons horizontally by default */
     padding-top: 50px;
+    width: 100%; /* Make sure the button container takes full width */
+    height: auto; /* Let the height adjust accordingly */
 }
 
 .btn1,
@@ -126,6 +130,7 @@ main span {
     border-radius: 50px;
     font-size: 15px;
     box-sizing: border-box; /* Include padding and border in width/height */
+    margin: 10px 0; /* Add space between buttons */
 }
 
 .btn1 {
@@ -304,8 +309,10 @@ h2 {
     }
 
     .btn {
-        flex-direction: column;
+        flex-direction: column; /* Stack buttons vertically on mobile */
         padding-top: 30px;
+        justify-content: center;
+        align-items: center;
     }
 
     .btn1,
@@ -330,6 +337,8 @@ h2 {
     .btn {
         flex-direction: column;
         padding-top: 30px;
+        justify-content: center;
+        align-items: center;
     }
 
     .btn1,
