@@ -168,27 +168,33 @@ main span {
 }
 
 /* Skill section styles */
+/* Skill section styles */
 .skill {
-    height: 100%;
+    height: auto;  /* Allow content to stretch based on content */
     background-color: black;
     color: white;
-    padding: 60px;
+    padding: 80px; /* Adjust padding as needed */
     border-radius: 50px;
+    overflow: hidden; /* Prevent content overflow */
+    box-sizing: border-box; /* Ensure padding is accounted for in the overall size */
 }
 
 .skill h1 {
     text-align: center;
     font-size: 80px;
     font-weight: 600;
-    margin-bottom: 30px;
+    margin-bottom: 30px; /* Add space below heading */
 }
 
 .skill p {
     text-align: center;
     font-size: 35px;
-    margin-bottom: 50px;
+    margin-bottom: 50px; /* Add space below paragraph */
     padding-top: 70px;
+    max-width: 100%; /* Prevent content from overflowing horizontally */
+    word-wrap: break-word; /* Ensure text wraps inside the container */
 }
+
 
 /* Section 2 styles */
 .section2 {
