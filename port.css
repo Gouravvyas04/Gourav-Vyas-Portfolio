@@ -121,10 +121,11 @@ main span {
 
 .btn1,
 .btn2 {
-    height: 10vh;
-    width: 13vw;
+    width: 90%; /* Adjust width to be responsive */
+    height: 10vh; /* Ensure the height is responsive */
     border-radius: 50px;
     font-size: 15px;
+    box-sizing: border-box; /* Include padding and border in width/height */
 }
 
 .btn1 {
@@ -309,9 +310,9 @@ h2 {
 
     .btn1,
     .btn2 {
-        width: 80%;
-        height: 12vh;
-        margin: 5px 0;
+        width: 80%;  /* Set width to be a percentage of the screen */
+        height: 12vh; /* Adjust height for mobile */
+        font-size: 14px;  /* Make text size smaller on mobile */
     }
 }
 
