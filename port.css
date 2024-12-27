@@ -12,12 +12,10 @@ body {
     height: 100%;
     width: 100%;
     background-color: rgb(48, 47, 47);
+    font-family: sans-serif;
 }
 
-
 /* Navbar styles */
-
-
 .nav-bar {
     width: 250px;
     height: 100%;
@@ -85,16 +83,8 @@ body {
     margin-left: 250px;
 }
 
-.nav button:hover {
-    color: rgb(30, 162, 30);
-    cursor: pointer;
-    font-size: 25px;
-    transition: 0.2s;
-}
-
 /* Main content styles */
 main {
-    font-family: sans-serif;
     background-color: white;
     padding-top: 200px; /* Adjust padding as needed */
     margin-top: 100px; /* Space for the navbar */
@@ -174,8 +164,7 @@ main span {
     height: 100%;
     background-color: black;
     color: white;
-    font-family: sans-serif;
-    padding: 80px; /* Adjust padding as needed */
+    padding: 80px;
     border-radius: 50px;
 }
 
@@ -183,13 +172,13 @@ main span {
     text-align: center;
     font-size: 80px;
     font-weight: 600;
-    margin-bottom: 30px; /* Add space below heading */
+    margin-bottom: 30px;
 }
 
 .skill p {
     text-align: center;
     font-size: 35px;
-    margin-bottom: 50px; /* Add space below paragraph */
+    margin-bottom: 50px;
     padding-top: 70px;
 }
 
@@ -197,9 +186,7 @@ main span {
 .section2 {
     background-color: white;
     border-radius: 50px;
-    font-family: sans-serif;
     padding: 50px;
-    /* Adjust padding as needed */
 }
 
 .section2-content {
@@ -208,7 +195,6 @@ main span {
     text-align: center;
     font-weight: 900;
     padding-bottom: 30px;
-    /* Add space below heading */
 }
 
 .page-content {
@@ -224,108 +210,33 @@ main span {
     width: 25vw;
     border-radius: 20px;
     margin-bottom: 30px;
-    /* Add space between boxes */
 }
 
-.heading1 {
-    text-align: center;
-    font-weight: 600;
-}
-
-.heading2 {
-    text-align: center;
-    font-weight: 600;
-}
-
+.heading1,
+.heading2,
 .heading3 {
     text-align: center;
     font-weight: 600;
-}
-
-/* Responsive Styles */
-@media (max-width: 1200px) {
-    .box {
-        width: 45vw;
-        /* Two boxes per row with space in between */
-    }
-
-    .section2-content {
-        font-size: 60px;
-        /* Adjust heading size for smaller screens */
-    }
-}
-
-@media (max-width: 768px) {
-    .box {
-        width: 90vw;
-        /* One box per row with space in between */
-        height: auto;
-        /* Adjust height to fit content */
-    }
-
-    .section2-content {
-        font-size: 40px;
-        /* Further adjust heading size for smaller screens */
-    }
-}
-
-@media (max-width: 480px) {
-    .section2 {
-        padding: 20px;
-        /* Reduce padding for very small screens */
-    }
-
-    .section2-content {
-        font-size: 30px;
-        /* Further adjust heading size for very small screens */
-    }
-
-    .box {
-        width: 100%;
-        /* Full width for very small screens */
-        padding: 10px;
-        /* Reduce padding inside boxes for very small screens */
-        height: auto;
-        /* Adjust height to fit content */
-    }
-}
-
-.icon img{
-    width: 100%;
-    height: 100%;
-}
-
-.box-btn{
-    border: none;
-    cursor: pointer;
-    font-size: 15px;
-    background: transparent;
-    color: grey;
-}
-
-h2{
-    margin: 0 auto;
 }
 
 /* Section 3 styles */
 .section3 {
     background-color: black;
     color: white;
-    font-family: sans-serif;
-    padding: 50px; /* Adjust padding as needed */
+    padding: 50px;
 }
 
 .section3 h1 {
     text-align: center;
     font-size: 80px;
     font-weight: 600;
-    margin-bottom: 30px; /* Add space below heading */
+    margin-bottom: 30px;
 }
 
 .section3 h3 {
     text-align: center;
     font-size: 40px;
-    margin-bottom: 30px; /* Add space below subheading */
+    margin-bottom: 30px;
 }
 
 .contact-btns {
@@ -337,8 +248,8 @@ h2{
 
 .contact-btns img {
     margin: 0 10px;
-    width: 40px; /* Adjust image size */
-    height: auto; /* Maintain aspect ratio */
+    width: 40px;
+    height: auto;
 }
 
 .git {
@@ -347,6 +258,127 @@ h2{
 
 .email {
     text-align: center;
-    padding-top: 30px; /* Adjust spacing */
-    margin-bottom: 50px; /* Add space below email */
+    padding-top: 30px;
+    margin-bottom: 50px;
+}
+
+/* Icon and button styles */
+.icon img {
+    width: 100%;
+    height: 100%;
+}
+
+.box-btn {
+    border: none;
+    cursor: pointer;
+    font-size: 15px;
+    background: transparent;
+    color: grey;
+}
+
+h2 {
+    margin: 0 auto;
+}
+
+/* Responsive Styles */
+
+/* Mobile-first design, for small devices */
+@media (max-width: 480px) {
+    .section2 {
+        padding: 20px;
+    }
+
+    .section2-content {
+        font-size: 30px;
+    }
+
+    .box {
+        width: 100%;
+        padding: 10px;
+        height: auto;
+    }
+
+    .section3 h1, .section3 h3 {
+        font-size: 40px;
+    }
+
+    .btn {
+        flex-direction: column;
+        padding-top: 30px;
+    }
+
+    .btn1,
+    .btn2 {
+        width: 80%;
+        height: 12vh;
+        margin: 5px 0;
+    }
+}
+
+/* Tablets and below (portrait mode) */
+@media (max-width: 768px) {
+    .box {
+        width: 90vw;
+        height: auto;
+    }
+
+    .section2-content {
+        font-size: 40px;
+    }
+
+    .btn {
+        flex-direction: column;
+        padding-top: 30px;
+    }
+
+    .btn1,
+    .btn2 {
+        width: 80%;
+        height: 12vh;
+        margin: 5px 0;
+    }
+}
+
+/* Small laptops and below */
+@media (max-width: 1200px) {
+    .box {
+        width: 45vw;
+    }
+
+    .section2-content {
+        font-size: 60px;
+    }
+}
+
+/* Larger screens - Adjust for wide displays */
+@media (min-width: 1600px) {
+    .box {
+        width: 20vw;
+    }
+
+    .section2-content {
+        font-size: 90px;
+    }
+}
+
+/* Browser compatibility: Using prefixed properties for older browsers */
+@-webkit-keyframes fade {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+@keyframes fade {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+/* Flexbox fixes for older browsers */
+@supports not (display: flex) {
+    .nav {
+        display: block;
+    }
+
+    .btn {
+        display: block;
+    }
 }
