@@ -1,32 +1,33 @@
-/* Add this CSS to your port.css file */
-
-/* Default styles */
+/* Global Styles */
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    scroll-behavior: smooth;
 }
 
-html,
-body {
+html, body {
     height: 100%;
     width: 100%;
-    background-color: rgb(48, 47, 47);
-    font-family: sans-serif;
+    background-color: #2c2c2c;
+    font-family: 'Poppins', sans-serif;
+    color: white;
 }
 
-/* Navbar styles */
+/* Navbar Styles */
 .nav-bar {
     width: 250px;
     height: 100%;
-    background-color: rgb(7, 7, 7);
+    background: rgba(10, 10, 10, 0.9); /* Glassmorphism effect */
+    backdrop-filter: blur(10px);
     position: fixed;
     top: 0;
     left: -250px;
     z-index: 100;
-    transition: left 0.3s ease;
+    transition: left 0.4s ease-in-out;
     border-radius: 0 20px 20px 0;
     color: white;
+    box-shadow: 5px 0 15px rgba(0, 0, 0, 0.3);
 }
 
 .nav {
@@ -40,39 +41,42 @@ body {
     background: transparent;
     color: white;
     border: none;
-    font-size: 15px;
-    margin: 10px 0;
+    font-size: 18px;
+    margin: 15px 0;
     cursor: pointer;
+    transition: 0.3s ease-in-out;
 }
 
 .nav button:hover {
-    color: rgb(30, 162, 30);
-    font-size: 25px;
-    transition: 0.2s;
+    color: #1ac31a;
+    transform: scale(1.1);
 }
 
+/* Sidebar Toggle Button */
 .sidebar-toggle {
     position: fixed;
     top: 20px;
     left: 20px;
     z-index: 110;
-    background-color: rgb(7, 7, 7);
+    background: rgba(10, 10, 10, 0.8);
     color: white;
     border: none;
-    font-size: 30px;
+    font-size: 25px;
     padding: 10px 15px;
-    border-radius: 5px;
+    border-radius: 8px;
     cursor: pointer;
+    transition: 0.3s;
 }
 
 .sidebar-toggle:hover {
-    background-color: rgb(30, 30, 30);
+    background-color: #1c1c1c;
+    transform: scale(1.1);
 }
 
-/* Adjustments for main content */
+/* Adjustments for Main Content */
 .main-content {
     margin-left: 0;
-    transition: margin-left 0.3s ease;
+    transition: margin-left 0.4s ease-in-out;
 }
 
 .show-sidebar .nav-bar {
@@ -83,320 +87,167 @@ body {
     margin-left: 250px;
 }
 
-/* Main content styles */
+/* Main Content Styling */
 main {
     background-color: white;
-    padding-top: 200px; /* Adjust padding as needed */
-    margin-top: 100px; /* Space for the navbar */
-    border-radius: 50px;
-    padding-bottom: 30px;
+    padding: 100px 20px;
+    margin-top: 50px;
+    border-radius: 30px;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+    animation: fadeIn 1s ease-in-out;
 }
 
-.content-start {
-    text-align: center;
-    font-size: 25px;
+/* Section Styling */
+.section2, .section3, .skill {
+    padding: 50px;
+    border-radius: 30px;
+    margin: 20px 0;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
 }
 
-.content-mid {
-    padding-top: 30px;
-    font-size: 50px;
-    text-align: center;
-    padding-left: 20px;
-    padding-right:20px;
-}
-
-.content-end {
-    text-align: center;
-    font-size: 20px;
-    padding-top: 40px;
-}
-
-main span {
-    font-weight: 900;
-}
-
-.btn {
-    display: flex;
-    justify-content: center; /* Center buttons horizontally */
-    align-items: center; /* Center buttons vertically */
-    flex-direction: row; /* Align buttons horizontally by default */
-    padding-top: 50px;
-    width: 100%; /* Make sure the button container takes full width */
-    height: auto; /* Let the height adjust accordingly */
-}
-
-.btn1,
-.btn2 {
-    width: 90%; /* Adjust width to be responsive */
-    height: 10vh; /* Ensure the height is responsive */
-    border-radius: 50px;
-    font-size: 15px;
-    box-sizing: border-box; /* Include padding and border in width/height */
-    margin: 10px 0; /* Add space between buttons */
-}
-
-.btn1 {
-    background-color: rgb(7, 95, 7);
-    border: 2px solid rgb(7, 95, 7);
-    color: white;
-}
-
-.btn1:hover {
-    background-color: rgb(14, 119, 14);
-    cursor: pointer;
-}
-
-.btn2 {
-    border: 2px solid rgb(7, 95, 7);
-    background-color: white;
-    color: rgb(7, 95, 7);
-}
-
-.btn2:hover {
-    background-color: rgb(216, 251, 216);
-    cursor: pointer;
-}
-
-.scroll-content {
-    color: rgb(183, 179, 179);
-    overflow-x: hidden;
-    overflow-y: hidden;
-    white-space: nowrap;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
-/* Skill section styles */
-/* Skill section styles */
+/* Skill Section */
 .skill {
-    height: auto;  /* Allow content to stretch based on content */
-    background-color: black;
+    background: linear-gradient(135deg, #000000, #1f1f1f);
     color: white;
-    padding: 40px; /* Adjust padding as needed */
-    border-radius: 50px;
-    overflow: hidden; /* Prevent content overflow */
-    box-sizing: border-box; /* Ensure padding is accounted for in the overall size */
+    text-align: center;
+    padding: 50px;
 }
 
 .skill h1 {
-    text-align: center;
-    font-size: 80px;
-    font-weight: 600;
-    margin-bottom: 20px; /* Add space below heading */
+    font-size: 60px;
+    font-weight: bold;
+    text-transform: uppercase;
+    margin-bottom: 20px;
+    animation: fadeInUp 1.2s ease-in-out;
 }
 
 .skill p {
-    text-align: center;
-    font-size: 30px;
-    margin-bottom: 50px; /* Add space below paragraph */
-    padding-top: 70px;
-    max-width: 100%; /* Prevent content from overflowing horizontally */
-    word-wrap: break-word; /* Ensure text wraps inside the container */
+    font-size: 22px;
+    line-height: 1.6;
+    max-width: 80%;
+    margin: auto;
 }
 
-
-/* Section 2 styles */
-.section2 {
-    background-color: white;
-    border-radius: 50px;
-    padding: 50px;
-}
-
-.section2-content {
-    font-size: 80px;
-    color: black;
-    text-align: center;
-    font-weight: 900;
-    padding-bottom: 30px;
-}
-
-.page-content {
+/* Buttons */
+.btn {
     display: flex;
+    justify-content: center;
     flex-wrap: wrap;
-    justify-content: space-evenly;
-    padding-top: 50px;
-    overflow-y: auto;
+    gap: 15px;
+    margin-top: 40px;
 }
 
-.box {
-    height: 50vh;
-    width: 25vw;
-    border-radius: 20px;
-    margin-bottom: 30px;
+.btn1, .btn2 {
+    padding: 15px 30px;
+    font-size: 18px;
+    border-radius: 30px;
+    cursor: pointer;
+    transition: all 0.3s ease-in-out;
+    font-weight: bold;
 }
 
-.heading1,
-.heading2,
-.heading3 {
-    text-align: center;
-    font-weight: 600;
-}
-
-/* Section 3 styles */
-.section3 {
-    background-color: black;
+.btn1 {
+    background: linear-gradient(45deg, #0eaf0e, #28d628);
+    border: none;
     color: white;
-    padding: 50px;
+    box-shadow: 0px 4px 8px rgba(0, 255, 0, 0.4);
 }
 
-.section3 h1 {
-    text-align: center;
-    font-size: 80px;
-    font-weight: 600;
-    margin-bottom: 30px;
+.btn1:hover {
+    transform: scale(1.05);
+    box-shadow: 0px 6px 12px rgba(0, 255, 0, 0.5);
 }
 
-.section3 h3 {
-    text-align: center;
-    font-size: 40px;
-    margin-bottom: 30px;
+.btn2 {
+    background: transparent;
+    border: 2px solid #0eaf0e;
+    color: #0eaf0e;
 }
 
+.btn2:hover {
+    background: #0eaf0e;
+    color: white;
+}
+
+/* Contact Section */
 .contact-btns {
     display: flex;
     justify-content: center;
-    align-items: center;
-    cursor: pointer;
+    gap: 20px;
+    padding-top: 20px;
 }
 
 .contact-btns img {
-    margin: 0 10px;
-    width: 40px;
-    height: auto;
+    width: 50px;
+    transition: 0.3s;
 }
 
-.git {
-    filter: brightness(0) invert(1);
+.contact-btns img:hover {
+    transform: scale(1.2);
 }
 
-.email {
-    text-align: center;
-    padding-top: 30px;
-    margin-bottom: 50px;
+/* Hover Animations */
+.box {
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
 }
 
-/* Icon and button styles */
-.icon img {
-    width: 100%;
-    height: 100%;
+.box:hover {
+    transform: scale(1.05);
+    box-shadow: 0 8px 16px rgba(0, 255, 0, 0.3);
 }
 
-.box-btn {
-    border: none;
-    cursor: pointer;
-    font-size: 15px;
-    background: transparent;
-    color: grey;
-}
-
-h2 {
-    margin: 0 auto;
-}
-
-/* Responsive Styles */
-
-/* Mobile-first design, for small devices */
-@media (max-width: 480px) {
-    .section2 {
-        padding: 20px;
+/* Keyframe Animations */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(-20px);
     }
-
-    .section2-content {
-        font-size: 30px;
-    }
-
-    .box {
-        width: 100%;
-        padding: 10px;
-        height: auto;
-    }
-
-    .section3 h1, .section3 h3 {
-        font-size: 40px;
-    }
-
-    .btn {
-        flex-direction: column; /* Stack buttons vertically on mobile */
-        padding-top: 30px;
-        justify-content: center;
-        align-items: center;
-    }
-
-    .btn1,
-    .btn2 {
-        width: 80%;  /* Set width to be a percentage of the screen */
-        height: 12vh; /* Adjust height for mobile */
-        font-size: 14px;  /* Make text size smaller on mobile */
+    to {
+        opacity: 1;
+        transform: translateY(0);
     }
 }
 
-/* Tablets and below (portrait mode) */
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Responsive Design */
 @media (max-width: 768px) {
-    .box {
-        width: 90vw;
-        height: auto;
+    .nav-bar {
+        width: 200px;
     }
 
-    .section2-content {
+    .show-sidebar .main-content {
+        margin-left: 200px;
+    }
+
+    .btn1, .btn2 {
+        width: 90%;
+    }
+}
+
+@media (max-width: 480px) {
+    .nav-bar {
+        width: 180px;
+    }
+
+    .show-sidebar .main-content {
+        margin-left: 180px;
+    }
+
+    .btn1, .btn2 {
+        width: 100%;
+    }
+
+    .skill h1 {
         font-size: 40px;
-    }
-
-    .btn {
-        flex-direction: column;
-        padding-top: 30px;
-        justify-content: center;
-        align-items: center;
-    }
-
-    .btn1,
-    .btn2 {
-        width: 80%;
-        height: 12vh;
-        margin: 5px 0;
-    }
-}
-
-/* Small laptops and below */
-@media (max-width: 1200px) {
-    .box {
-        width: 45vw;
-    }
-
-    .section2-content {
-        font-size: 60px;
-    }
-}
-
-/* Larger screens - Adjust for wide displays */
-@media (min-width: 1600px) {
-    .box {
-        width: 20vw;
-    }
-
-    .section2-content {
-        font-size: 90px;
-    }
-}
-
-/* Browser compatibility: Using prefixed properties for older browsers */
-@-webkit-keyframes fade {
-    from { opacity: 0; }
-    to { opacity: 1; }
-}
-
-@keyframes fade {
-    from { opacity: 0; }
-    to { opacity: 1; }
-}
-
-/* Flexbox fixes for older browsers */
-@supports not (display: flex) {
-    .nav {
-        display: block;
-    }
-
-    .btn {
-        display: block;
     }
 }
